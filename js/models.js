@@ -76,7 +76,7 @@ class StoryList {
   static async addStory(user, newStory) {
     // query the /stories endpoint (no auth required)
     
-    console.log(user, newStory);
+    
     const response = await axios({
       url: `${BASE_URL}/stories`,
       method: "POST",
@@ -86,7 +86,7 @@ class StoryList {
       }
     });
 
-    console.log(response.data);
+   
    
     return new Story(response.data);
   }
